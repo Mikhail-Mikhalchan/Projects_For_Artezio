@@ -7,3 +7,7 @@ Operations history
 3. Created this file
 
 4. Add branch other_files
+
+5. Created "Info.txt"
+
+6. Add file "OneLes.jpg"
