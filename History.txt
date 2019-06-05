@@ -5,3 +5,5 @@ Operations history
 2. Initialized empty directory with name "Directory Git"
 
 3. Created this file
+
+4. Add branch other_files
