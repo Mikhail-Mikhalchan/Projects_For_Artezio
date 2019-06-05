@@ -1,0 +1,7 @@
+Operations history
+
+1. Add my name and email
+
+2. Initialized empty directory with name "Directory Git"
+
+3. Created this file
