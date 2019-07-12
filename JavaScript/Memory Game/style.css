@@ -1,0 +1,195 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+    background-image: url(images/background.png);
+    background-size: cover;
+}
+
+html {
+	font-family: 'Comfortaa', cursive;
+	font-size: 16pt;
+	line-height: 1.5;
+	color: #303030;
+    
+    scroll-behavior: smooth;
+}
+/*---------------------------------------------*/
+/*---------------------GAME--------------------*/
+/*---------------------------------------------*/
+
+.deck {
+  width: 1080px;
+  height: 640px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
+.card {
+  width: 115px;
+  height: 160px;
+  border-radius: 15px;
+  cursor: pointer;
+  margin: 10px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .8s;
+  box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .1);
+}
+
+.card:active {
+  transform: scale(0.95);
+  transition: transform .2s;
+}
+
+.card.flip {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 5px;
+  backface-visibility: hidden;
+}
+
+.front {
+  transform: rotateY(180deg);
+}
+
+/*---------------------------------------------*/
+/*---------------------PANEL-------------------*/
+/*---------------------------------------------*/
+
+.panel {
+	background-color: #bfdcff;
+	width: 100%;
+	color: #303030;
+	margin-top: 0px;
+    margin-bottom: 50px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+    
+    position: sticky;
+    top: 0;    
+}
+
+.button {
+  background-color: #002A5F;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  outline: none;
+}
+
+.game {
+    background-color: #fed842;
+    width: 250px;
+    color: #002A5F;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.game:active {
+    background-color: #EABB00;
+}
+
+#startGame {
+    position: relative;
+}
+
+#finishGame {
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+}
+
+.flips, .time {
+    margin-left: 5px;
+    margin-right: 5px;
+    display: flex;
+	flex-direction: row;
+}
+
+#flCount, #tCount {
+    width: 15px;
+}
+/*---------------------------------------------*/
+/*-------------START/WIN/LOSE BLOCKS-----------*/
+/*---------------------------------------------*/
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 10;
+}
+
+.modal {
+    width: 40%;
+    height: 60%;
+    position: fixed;
+    margin-left:30%;
+    margin-right:30%;
+    margin-top: -30%;
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
+    z-index: 11;
+}
+
+.startLogo {
+    height: 70%;
+    margin-top: 40px;
+}
+
+.start {
+     margin-top: 20px;
+     border-radius: 50px;
+}
+
+.winLogo {
+    margin-top: 2%;
+    height: 54.6%;
+    margin-left:25%;
+    margin-right:25%;
+    margin-bottom: 2%;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.total {
+    display: flex;
+	flex-direction: row;
+    align-items: center;
+	justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#finishFlips, #finishTime {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.win {
+    visibility: hidden;
+    height: 50%;
+}

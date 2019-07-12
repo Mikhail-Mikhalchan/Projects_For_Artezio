@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src = "script.js"></script>
+        <meta http-equiv = "content-type" content = "text/html"; charset = "UTF-8"/>       
+    </head>
+    <body>
+        <p>Выберите функцию:</p>
+        <input type = "radio" name = "choice" value = "sum" checked = "true">Cумма всех чисел от x1 до x2<br>
+        <input type = "radio" name = "choice" value = "multi">Произведение всех чисел от x1 до x2<br>
+        <input type = "radio" name = "choice" value = "prime">Простые числа в промежутке от x1 до x2<br><br>
+        x1: <input type = "text" id = "x1" class = "input"><br>
+        x2: <input type = "text" id = "x2" class = "input"><br><br>
+        <input type = "button" value = "Run" onclick="buttonRun()">
+        <input type = "button" value = "Очистить" onclick="buttonClear()"><br><br>
+        <div id = "result"></div>
+    </body>
+</html>

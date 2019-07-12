@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8"/>
+        <title>Memory Game</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class = "wrapper">
+            <div class = "panel">
+                <div class = "flips">Клики:</div>
+                <div id = "flCount" class = "flips">0</div>
+                <div class = "containerButtons">
+                    <button id = "startGame" class = "button game">Начать игру</button>
+                    <button id = "finishGame" class = "button game">Закончить игру</button>
+                </div>
+                <div class = "time">Время:</div>
+                <div id = "tCount" class = "time"><span id="countdown">180</span>c</div>
+            </div>
+            <div class = "gameBlock">
+                <section class = "deck">
+                    <div class = "card" data-framework="raccoon">
+                        <div class = "side back">
+                            <img src = "images/card-img/back.png">
+                        </div>
+                        <div class = "side front">
+                            <img src = "images/card-img/front/raccoon.png">
+                        </div>
+                    </div>
+                    <div class = "card" data-framework="cat">
+                        <div class = "side back">
+                            <img src = "images/card-img/back.png">
+                        </div>
+                        <div class = "side front">
+                            <img src = "images/card-img/front/cat.png">
+                        </div>
+                    </div>
+                    <div class = "card" data-framework="dog">
+                        <div class = "side back">
+                            <img src = "images/card-img/back.png">
+                        </div>
+                        <div class = "side front">
+                            <img src = "images/card-img/front/dog.png">
+                        </div>
+                    </div>
+                    <div class = "card" data-framework="elephant">
+                        <div class = "side back">
+                            <img src = "images/card-img/back.png">
+                        </div>
+                        <div class = "side front">
+                            <img src = "images/card-img/front/elephant.png">
+                        </div>
+                    </div>
+                    <div class = "card" data-framework="white-bear">
+                        <div class = "side back">
+                            <img src = "images/card-img/back.png">
+                        </div>
+                        <div class = "side front">
+                            <img src = "images/card-img/front/white-bear.png">
+                        </div>
+                    </div>
+                    <div class = "card" data-framework="hedgehod">
+                        <div class = "side back">
+                            <img src = "images/card-img/back.png">
+                        </div>
+                        <div class = "side front">
+                            <img src = "images/card-img/front/hedgehod.png">
+                        </div>
+                    </div>
+                    <div class = "card" data-framework="leopard">
+                        <div class = "side back">
+                            <img src = "images/card-img/back.png">
+                        </div>
+                        <div class = "side front">
+                            <img src = "images/card-img/front/leopard.png">
+                        </div>
+                    </div>
+                    <div class = "card" data-framework="pig">
+                        <div class = "side back">
+                            <img src = "images/card-img/back.png">
+                        </div>
+                        <div class = "side front">
+                            <img src = "images/card-img/front/pig.png">
+                        </div>
+                    </div>
+                    <div class = "card" data-framework="bear">
+                        <div class = "side back">
+                            <img src = "images/card-img/back.png">
+                        </div>
+                        <div class = "side front">
+                            <img src = "images/card-img/front/bear.png">
+                        </div>
+                    </div>
+                    <div class = "card" data-framework="lion">
+                        <div class = "side back">
+                            <img src = "images/card-img/back.png">
+                        </div>
+                        <div class = "side front">
+                            <img src = "images/card-img/front/lion.png">
+                        </div>
+                    </div>
+                    <div class = "card" data-framework="wolf">
+                        <div class = "side back">
+                            <img src = "images/card-img/back.png">
+                        </div>
+                        <div class = "side front">
+                            <img src = "images/card-img/front/wolf.png">
+                        </div>
+                    </div>
+                    <div class = "card" data-framework="rabbit">
+                        <div class = "side back">
+                            <img src = "images/card-img/back.png">
+                        </div>
+                        <div class = "side front">
+                            <img src = "images/card-img/front/rabbit.png">
+                        </div>
+                    </div>
+                    <div class = "card" data-framework="king-kong">
+                        <div class = "side back">
+                            <img src = "images/card-img/back.png">
+                        </div>
+                        <div class = "side front">
+                            <img src = "images/card-img/front/king-kong.png">
+                        </div>
+                    </div>
+                    <div class = "card" data-framework="deer">
+                        <div class = "side back">
+                            <img src = "images/card-img/back.png">
+                        </div>
+                        <div class = "side front">
+                            <img src = "images/card-img/front/deer.png">
+                        </div>
+                    </div>
+                    <div class = "card" data-framework="fox">
+                        <div class = "side back">
+                            <img src = "images/card-img/back.png">
+                        </div>
+                        <div class = "side front">
+                            <img src = "images/card-img/front/fox.png">
+                        </div>
+                    </div>
+                    <div class = "card" data-framework="squirrel">
+                        <div class = "side back">
+                            <img src = "images/card-img/back.png">
+                        </div>
+                        <div class = "side front">
+                            <img src = "images/card-img/front/squirrel.png">
+                        </div>
+                    </div>
+                    <div class = "card" data-framework="raccoon">
+                        <div class = "side back">
+                            <img src = "images/card-img/back.png">
+                        </div>
+                        <div class = "side front">
+                            <img src = "images/card-img/front/raccoon.png">
+                        </div>
+                    </div>
+                    <div class = "card" data-framework="cat">
+                        <div class = "side back">
+                            <img src = "images/card-img/back.png">
+                        </div>
+                        <div class = "side front">
+                            <img src = "images/card-img/front/cat.png">
+                        </div>
+                    </div>
+                    <div class = "card" data-framework="dog">
+                        <div class = "side back">
+                            <img src = "images/card-img/back.png">
+                        </div>
+                        <div class = "side front">
+                            <img src = "images/card-img/front/dog.png">
+                        </div>
+                    </div>
+                    <div class = "card" data-framework="elephant">
+                        <div class = "side back">
+                            <img src = "images/card-img/back.png">
+                        </div>
+                        <div class = "side front">
+                            <img src = "images/card-img/front/elephant.png">
+                        </div>
+                    </div>
+                    <div class = "card" data-framework="white-bear">
+                        <div class = "side back">
+                            <img src = "images/card-img/back.png">
+                        </div>
+                        <div class = "side front">
+                            <img src = "images/card-img/front/white-bear.png">
+                        </div>
+                    </div>
+                    <div class = "card" data-framework="hedgehod">
+                        <div class = "side back">
+                            <img src = "images/card-img/back.png">
+                        </div>
+                        <div class = "side front">
+                            <img src = "images/card-img/front/hedgehod.png">
+                        </div>
+                    </div>
+                    <div class = "card" data-framework="leopard">
+                        <div class = "side back">
+                            <img src = "images/card-img/back.png">
+                        </div>
+                        <div class = "side front">
+                            <img src = "images/card-img/front/leopard.png">
+                        </div>
+                    </div>
+                    <div class = "card" data-framework="pig">
+                        <div class = "side back">
+                            <img src = "images/card-img/back.png">
+                        </div>
+                        <div class = "side front">
+                            <img src = "images/card-img/front/pig.png">
+                        </div>
+                    </div>
+                    <div class = "card" data-framework="bear">
+                        <div class = "side back">
+                            <img src = "images/card-img/back.png">
+                        </div>
+                        <div class = "side front">
+                            <img src = "images/card-img/front/bear.png">
+                        </div>
+                    </div>
+                    <div class = "card" data-framework="lion">
+                        <div class = "side back">
+                            <img src = "images/card-img/back.png">
+                        </div>
+                        <div class = "side front">
+                            <img src = "images/card-img/front/lion.png">
+                        </div>
+                    </div>
+                    <div class = "card" data-framework="wolf">
+                        <div class = "side back">
+                            <img src = "images/card-img/back.png">
+                        </div>
+                        <div class = "side front">
+                            <img src = "images/card-img/front/wolf.png">
+                        </div>
+                    </div>
+                    <div class = "card" data-framework="rabbit">
+                        <div class = "side back">
+                            <img src = "images/card-img/back.png">
+                        </div>
+                        <div class = "side front">
+                            <img src = "images/card-img/front/rabbit.png">
+                        </div>
+                    </div>
+                    <div class = "card" data-framework="king-kong">
+                        <div class = "side back">
+                            <img src = "images/card-img/back.png">
+                        </div>
+                        <div class = "side front">
+                            <img src = "images/card-img/front/king-kong.png">
+                        </div>
+                    </div>
+                    <div class = "card" data-framework="deer">
+                        <div class = "side back">
+                            <img src = "images/card-img/back.png">
+                        </div>
+                        <div class = "side front">
+                            <img src = "images/card-img/front/deer.png">
+                        </div>
+                    </div>
+                    <div class = "card" data-framework="fox">
+                        <div class = "side back">
+                            <img src = "images/card-img/back.png">
+                        </div>
+                        <div class = "side front">
+                            <img src = "images/card-img/front/fox.png">
+                        </div>
+                    </div>
+                    <div class = "card" data-framework="squirrel">
+                        <div class = "side back">
+                            <img src = "images/card-img/back.png">
+                        </div>
+                        <div class = "side front">
+                            <img src = "images/card-img/front/squirrel.png">
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <!--Стартовые блоки-->
+        <div id = "overlayBlock" class="overlay"></div>
+        <div id = "startBlock" class="modal">
+            <img class = "startLogo" src = "images/startLogo.png">
+            <button id = "btnStart" class = "button game start">Перейти</button>
+        </div>
+        <!--Блок победы-->
+        <div id = "winBlock" class="modal win">
+            <img class = "startLogo winLogo" src = "images/startLogo.png">
+            <div class = "total">Клики: <div id = "finishFlips"></div> Время: <div id = "finishTime"></div></div>
+            <div class = "total">Победа! Хороший результат, попробуйте его улучшить!</div>
+            <div><button id = "btnWinClose" class = "button game start close">Закрыть</button></div>
+        </div>
+        <!--Блок поражения-->
+        <div id = "loseBlock" class="modal win">
+            <img class = "startLogo winLogo" src = "images/startLogo.png">
+            <div class = "total">Время истекло!</div>
+            <div class = "total">Не расстраивайтесь, попробуйте еще раз, ведь Memory Game развивает Вашу внимательность и память :)</div>
+            <div><button id = "btnLoseClose" class = "button game start close">Закрыть</button></div>
+        </div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+	<script src="main.js"></script>
+    </body>
+</html>
